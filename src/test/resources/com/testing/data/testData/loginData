@@ -1,0 +1,14 @@
+{
+  "pageName": "loginPage",
+  "pageUrl": "https://login.yahoo.com",
+  "pageInputObjects": [
+    {
+      "objectName": "userName",
+      "objectValue": "tester.selenium"
+    },
+    {
+      "objectName": "passWord",
+      "objectValue": "1q2w!Q@W"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "pageName": "loginPage",
+  "pageUrl": "https://login.yahoo.com",
+  "pageInputObjects": [
+    {
+      "objectName": "userName",
+      "objectIdentifier": "username",
+      "objectType": "id",
+      "comment": "User name of the person to be logged in."
+    },
+    {
+      "objectName": "passWord",
+      "objectIdentifier": "passwd",
+      "objectType": "id",
+      "comment": "Password."
+    }
+  ],
+  "pageActionObjects": [
+    {
+      "objectName": "loginSubmit",
+      "objectIdentifier": ".save",
+      "objectType": "id",
+      "comment": "Login button."
+    }
+  ]
+}

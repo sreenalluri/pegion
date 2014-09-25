@@ -20,7 +20,7 @@ public class getPageElement {
 			final String dir = System.getProperty("user.dir");
 			String locatorType = null, locatorValue = null;
 			
-			FileReader fileReader = new FileReader(dir +"/src/test/resources/edu/apollogrp/data/objectData/"+ PageName);
+			FileReader fileReader = new FileReader(dir +"/src/test/resources/com/testing/data/objectData/"+ PageName);
 
 			BufferedReader buffered = new BufferedReader(fileReader);
 

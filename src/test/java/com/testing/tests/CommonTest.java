@@ -19,29 +19,34 @@ import com.testing.utils.fillPageElement;
 import com.testing.utils.getPageElement;
 
 public class CommonTest {
-	  protected static WebDriver driver = new FirefoxDriver();	 
-      protected static WebDriverWait wait = new WebDriverWait(driver, 40);
+	protected static WebDriver driver = new FirefoxDriver();
+	protected static WebDriverWait wait = new WebDriverWait(driver, 40);
 
-	  @BeforeSuite(alwaysRun=true)
-	  //@Parameters({"baseUrl", "ContentType", "Accept", "userName", "password"})
-	    public void setUp () throws Exception {
-		  String baseUrl = "http://finance.yahoo.com";
-		  
-		  driver.get(baseUrl);
-		  
-		  fillPageElement.fillPage("login.json", "loginData.json");
-		  driver.findElement(getPageElement.getElement("login.json", "loginSubmit")).submit();
-		  wait.until(ExpectedConditions.elementToBeClickable(getPageElement.getElement("createNewCoursePage.json", "createNewCourse"))); 
-		  Set<org.openqa.selenium.Cookie> allCookies = driver.manage().getCookies();
-			for (org.openqa.selenium.Cookie loadedCookie : allCookies) {
-				if (loadedCookie.getName().equalsIgnoreCase("APOLLOASSERTION")){
-					String cookie = "APOLLOASSERTION="+ loadedCookie.getValue();
-				}
-			} 
-	    }
-	  @AfterSuite(alwaysRun=true)
-	  public void shutDown(){
-		  driver.quit();
-	  }
-	
+	@BeforeSuite(alwaysRun = true)
+	// @Parameters({"baseUrl", "ContentType", "Accept", "userName", "password"})
+	public void setUp() throws Exception {
+		String baseUrl = "https://login.yahoo.com";
+
+		driver.get(baseUrl);
+
+		fillPageElement.fillPage("loginPage", "loginData");
+		driver.findElement(
+				getPageElement.getElement("loginPage", "loginSubmit"))
+				.submit();
+		wait.until(ExpectedConditions.elementToBeClickable(getPageElement
+				.getElement("homePage", "searchBox")));
+		/*
+		 * Set<org.openqa.selenium.Cookie> allCookies =
+		 * driver.manage().getCookies(); for (org.openqa.selenium.Cookie
+		 * loadedCookie : allCookies) { if
+		 * (loadedCookie.getName().equalsIgnoreCase("Cookie")){ String cookie =
+		 * "Cookie="+ loadedCookie.getValue(); } }
+		 */
+	}
+
+	@AfterSuite(alwaysRun = true)
+	public void shutDown() {
+		driver.quit();
+	}
+
 }

@@ -1,0 +1,20 @@
+{
+  "pageName": "homePage",
+  "pageUrl": "https://yahoo.com",
+  "pageInputObjects": [
+    {
+      "objectName": "searchBox",
+      "objectIdentifier": "p_13838465-p",
+      "objectType": "id",
+      "comment": "Search box on the top"
+    }
+  ],
+  "pageActionObjects": [
+    {
+      "objectName": "searchWeb",
+      "objectIdentifier": "search-submit",
+      "objectType": "id",
+      "comment": "Search button."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Yahoo Tests">
+	<parameter name="baseUrl" value="https://login.yahoo.com/" />
+	<parameter name="ContentType" value="application/json" />
+	<parameter name="Accept" value="application/json" />
+	<parameter name="userName" value="tester.selenium@yahoo.com" /> 
+	<parameter name="password" value="1q2w!Q@W" />
+  <test name="Yahoo Tests" preserve-order="true">
+  	<groups>
+      	<run>
+       		<include name="sanity"/>
+      	</run>
+   	</groups>
+    <classes>
+	    <class name="com.testing.tests.loginTests.Login"/> 
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
