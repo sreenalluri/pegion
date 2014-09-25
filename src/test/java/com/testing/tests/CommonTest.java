@@ -2,6 +2,7 @@ package com.testing.tests;
 
 import java.util.Set;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,6 +22,7 @@ import com.testing.utils.getPageElement;
 public class CommonTest {
 	protected static WebDriver driver = new FirefoxDriver();
 	protected static WebDriverWait wait = new WebDriverWait(driver, 40);
+
 
 	@BeforeSuite(alwaysRun = true)
 	// @Parameters({"baseUrl", "ContentType", "Accept", "userName", "password"})
