@@ -21,7 +21,7 @@ import com.testing.utils.getPageElement;
 
 public class CommonTest {
 	protected static WebDriver driver = new FirefoxDriver();
-	protected static WebDriverWait wait = new WebDriverWait(driver, 40);
+	protected static WebDriverWait wait = new WebDriverWait(driver, 80);
 
 
 	@BeforeSuite(alwaysRun = true)
@@ -35,7 +35,7 @@ public class CommonTest {
 		driver.findElement(
 				getPageElement.getElement("loginPage", "loginSubmit"))
 				.submit();
-		wait.until(ExpectedConditions.elementToBeClickable(getPageElement
+		wait.until(ExpectedConditions.visibilityOfElementLocated(getPageElement
 				.getElement("homePage", "searchBox")));
 		/*
 		 * Set<org.openqa.selenium.Cookie> allCookies =
